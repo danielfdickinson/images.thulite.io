@@ -61,3 +61,44 @@ You can add images to your `.md` pages by using the [Markdown](https://daringfir
 ```
 
 ![A young lion cub walking through a wooded area](https://images.unsplash.com/photo-1703237307519-104c7aebf46c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8M3x8fGVufDB8fHx8fA%3D%3D)
+
+## Handling SVG images in Markdown
+
+[A recent contribution to Thulite Images added using SVG images in Markdown](https://github.com/thuliteio/images/pull/36)
+
+There is a caveat, however. An SVG with a grey stroke instead of black stroke,
+and the default background (tranparent) will have little contrast in dark mode
+(see below), but it will look fine in light mode (immediately below).
+
+```md
+![Light theme: A spiral that looks snail shell-ish](light-theme-snailish-spiral.png)
+```
+
+![Light theme: A spiral that looks snail shell-ish](light-theme-snailish-spiral.png)
+
+```md
+![Dark theme: A spiral that looks snail shell-ish](dark-theme-snailish-spiral.png)
+```
+
+![Dark theme: A spiral that looks snail shell-ish](dark-theme-snailish-spiral.png)
+
+This can be remedied with by adding
+
+```scss
+// Put your custom (S)CSS variables here
+:root {
+  --markdown-svg: yellowgreen;
+}
+```
+
+to `assets/scss/common/_variables-custom.scss`, when using the `doks` theme.
+
+This gives:
+
+```md
+![A spiral that looks snail shell-ish](snailish-spiral.svg)
+```
+
+![A spiral that looks snail shell-ish](snailish-spiral.svg)
+
+which looks the same with both light and dark themes.
