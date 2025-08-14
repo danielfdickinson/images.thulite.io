@@ -172,3 +172,9 @@ figcaption {
     margin-right: 0 !important;
   }
 }
+
+// Avoid FOUC
+#h-rh-i-5 {
+ width: 512px;
+ height: 512px;
+}
