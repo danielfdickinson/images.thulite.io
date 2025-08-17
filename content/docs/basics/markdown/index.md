@@ -67,7 +67,7 @@ You can add images to your `.md` pages by using the [Markdown](https://daringfir
 [A recent contribution to Thulite Images added using SVG images in Markdown](https://github.com/thuliteio/images/pull/36)
 
 There is a caveat, however. An SVG with a grey stroke instead of black stroke,
-and the default background (tranparent) will have little contrast in dark mode
+and the default background (transparent) will have little contrast in dark mode
 (see below), but it will look fine in light mode (immediately below).
 
 ```md
