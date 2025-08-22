@@ -66,8 +66,16 @@ You can add images to your `.md` pages by using the [Markdown](https://daringfir
 
 [A recent contribution to Thulite Images added using SVG images in Markdown](https://github.com/thuliteio/images/pull/36)
 
+For example:
+
+```md
+![A spiral that looks snail shell-ish](snailish-spiral.svg)
+```
+
+![A spiral that looks snail shell-ish](snailish-spiral.svg)
+
 There is a caveat, however. An SVG with a grey stroke instead of black stroke,
-and the default background (tranparent) will have little contrast in dark mode
+and the default background (transparent) will have little contrast in dark mode
 (see below), but it will look fine in light mode (immediately below).
 
 ```md
@@ -96,9 +104,9 @@ to `assets/scss/common/_variables-custom.scss`, when using the `doks` theme.
 This gives:
 
 ```md
-![A spiral that looks snail shell-ish](snailish-spiral.svg)
+![A spiral that looks snail shell-ish: custom background colour](snailish-spiral-custom-svg-background.png)
 ```
 
-![A spiral that looks snail shell-ish](snailish-spiral.svg)
+![A spiral that looks snail shell-ish: custom background colour](snailish-spiral-custom-svg-background.png)
 
 which looks the same with both light and dark themes.
